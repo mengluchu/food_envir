@@ -1,5 +1,6 @@
 #'generate table to compare healthscore and AHEI, MDS, DAS under linear regression
 #'@param healthscore1 healthiness score
+<<<<<<< HEAD
 #'@param AHEI dietary score AHEI
 #'@param MDS dietary score MDS
 #'@param DAS dietary score DAS
@@ -7,14 +8,26 @@
 #'@export
 #'
 LMtable = function(healthscore1,AHEI,MDS,DAS, xlabplot="sum of healthiness score" ){
+=======
+#'@param xlabplot the name of the xlab
+#'@export
+#'
+LMtable = function(healthscore1, xlabplot="sum of healthiness score" ){
+>>>>>>> 81cd23fb8140a1a92d24e61dfc4bc2fe559820be
 
   datadf=na.omit(data.frame (healthscore=healthscore1, AHEI,MDS,DAS))
 
 
   fit = lm(healthscore~AHEI,data= datadf)
+<<<<<<< HEAD
  # plot(fit)
  # fit = lm( log(healthscore + 1 - min(healthscore))~AHEI, data = datadf)
  # plot(fit)
+=======
+  plot(fit)
+  fit = lm( log(healthscore + 1 - min(healthscore))~AHEI, data = datadf)
+  plot(fit)
+>>>>>>> 81cd23fb8140a1a92d24e61dfc4bc2fe559820be
   p_v = summary(fit)$coefficients[2,4]
   slope = summary(fit)$coefficients[2,1]
   con95 =  confint(fit, "AHEI", level = 0.95)
