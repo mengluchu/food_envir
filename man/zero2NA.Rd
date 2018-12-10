@@ -2,17 +2,17 @@
 % Please edit documentation in R/zero2NA.R
 \name{zero2NA}
 \alias{zero2NA}
-\title{Replace rowsum of zero to NA}
+\title{Replace the element of a vector which based on another dataframe has the rowsum of zero to NA}
 \usage{
-zero2NA(df, baseon)
+zero2NA(vec, baseon)
 }
 \arguments{
-\item{df}{the dataframe which needs to be processed}
+\item{vec}{the vector which needs to be processed}
 
-\item{baseon}{the dataframe which the calcualtion is based on. It could be the same as the df to be processed.}
+\item{baseon}{the dataframe which the calcualtion is based on.}
 }
 \description{
-Replace rowsum of zero to NA
+Replace the element of a vector which based on another dataframe has the rowsum of zero to NA
 }
 \details{
 if there is no resturant for an agent, replace the number of resturant (i,e, 0) to NA

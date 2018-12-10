@@ -31,7 +31,7 @@ Home_res_100m = subset_grep(Home_res, "100m")
 Home_res_500m = subset_grep(Home_res, "500m")
 
 
-ready_res = d_res[,-which(grepl(home_index，names(d_res)))]
+ready_res = d_res[,-which(grepl(home_index,names(d_res)))]
 
 
 ready_res_100m =subset_grep(ready_res, "100m")
