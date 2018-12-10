@@ -3,7 +3,8 @@
 #' @param  score the healthiniess score
 #' @details calculated as sum(score * foodenv_count)
 #' @export
-S1 = function(df_res,  score  )
+#'
+S1 = function(df_res,  score)
 {
   mul = sweep(df_res,2, score, "*")
   apply(mul,1,sum)

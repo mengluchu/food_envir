@@ -4,5 +4,5 @@
 #' @export
 subset_grep =  function(df, grepstring)
 {
-  df[,which(grepl(grepstring, names(df )))]
+  df[, which(grepl(grepstring, names(df)))]
 }

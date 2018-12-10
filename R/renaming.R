@@ -3,6 +3,7 @@
 #' @param name2replace greplstyle name to replace, e.g. "loc"
 #' @param replacenames the names to replace to, a list match the length of names to be replaced
 #' @export
+#'
 renaming = function(dataset, names2replace="loc", replacenames)
 {
   namesd2 =names(dataset)[which(grepl(names2replace, names(dataset)))]
