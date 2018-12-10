@@ -20,7 +20,7 @@ healthScore = function(df_res, df_tot = df_res, score, normalise = c("Ncati", "N
   resN=  switch(method,
     "simple" = df_res,
     "expFun" = log(df_res + 1), #natual base, all the bases should result in same correlation.
-    "threshold" = replace(df_res, threshold)
+    "threshold" = repl(df_res, threshold)
    )
 
   mul = sweep(resN, 2, score, "*")
