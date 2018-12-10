@@ -1,4 +1,5 @@
-
+library(devtools)
+install_github("mengluchu/food_envir")
 library(foreign)
 dataset = read.spss("C:/Users/lu000012/Documents/files/foodenv/170303_HELIUS data Maartje Poelman.sav", to.data.frame=TRUE)
 
