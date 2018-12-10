@@ -111,11 +111,10 @@ dfs1_home = S1(Home_res[,hind100m], d_res, score_home)
 #test(dfs1)
 #writeLines("td, th { padding : 6px } th { background-color : brown ; color : white; border :  1px solid white; } td { color : brown ; border : 1px solid brown }", con = "mystyle.css")
 
+# linear regression, no relationship could be found. if do category, the result looks wont change.
+h1 = healthScore(d_res_100m,score =score_res, normalise = "Nall", method = "expFun", threshold = 2)
 
-
-
-
-
+LMtable(h1, DAS = d2_omit$Total_DASH_Score, AHEI = d2_omit$Total_AHEI_Score, MDS = d2_omit$Total_MDS)
 
 
 
